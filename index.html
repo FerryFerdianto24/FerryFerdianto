@@ -2,7 +2,6 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
-   
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ferry Ferdianto</title>
     <style>
@@ -68,47 +67,49 @@
             border-bottom: 3px solid #0077cc;
             display: inline-block;
             padding-bottom: 5px;
-            margin-top:-50px;
+            margin-top: 30px;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 250px;
         }
 
         .about p {
             font-size: 1.2rem;
             max-width: 700px;
-            margin-top:-50px;
+            margin: 0;
+            text-align: justify;
         }
-        .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-}
 
-.about-text {
-    flex: 1;
-    min-width: 250px;
-}
+        .about-image {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
 
-.about-image {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
-}
-
-.about-image img {
-    width: 300px; /* Ukuran kotak (boleh kamu ganti 250px atau 200px) */
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-top: -20px
-}
-
+        .about-image img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 10px;
+        }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-           
+            margin-top: 30px;
         }
 
         .skill {
@@ -120,14 +121,12 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: background 0.3s ease;
             cursor: default;
-            text-decoration : none;
+            text-decoration: none;
         }
 
         .skill:hover {
             background: #005fa3;
         }
-
-        
 
         .projects {
             display: grid;
@@ -179,7 +178,6 @@
             box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
         }
 
-        /* Button style */
         .btn-contact {
             display: inline-block;
             background: #ffcc00;
@@ -197,8 +195,63 @@
             background: #e6b800;
         }
 
-        .gambar {
-            
+        /* Responsive untuk HP */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            main {
+                padding: 0 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+
+            .about p {
+                font-size: 1rem;
+                margin: 0 auto 20px;
+                text-align: justify;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 180px;
+                height: 180px;
+                margin-top: 10px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-contact {
+                width: 100%;
+                text-align: center;
+                padding: 12px 0;
+            }
+
+            section {
+                margin-bottom: 40px;
+            }
         }
     </style>
 </head>
@@ -213,40 +266,37 @@
         </nav>
     </header>
     <main>
-    <section id="about" class="about">
-    <h2>Tentang Saya</h2>
-    <div class="about-container">
-        <div class="about-text">
-            <p>Halo! Saya adalah Ferry Ferdianto seorang pengembang web yang bersemangat dengan pengalaman dalam membuat website yang menarik dan fungsional. Saya suka belajar teknologi baru dan selalu berusaha memberikan hasil terbaik dalam setiap proyek.</p>
-        </div>
-        <div class="about-image">
-            <img src="IMG-20250403-WA0024.jpg" alt="Tentang Saya">
-        </div>
-    </div>
-</section>
-<section id="skills" class="skills-section">
-    <h2>Keahlian</h2>
-    <p style="font-size: 1.1rem; margin-bottom: 25px; color: #555;">
-        Berikut adalah salah satu bidang keahlian saya yang terus saya kembangkan seiring dengan pengalaman dan pembelajaran berkelanjutan.
-    </p>
-  
-    <div class="projects">
-        <div class="project-card">
-            <img src="Flower, sun, beauty😍.jpeg" alt="Keahlian" class="project-image" />
-            <div class="project-content">
-                <h3 class="project-title">Beberapa Bidang Keahlian Saya</h3>
-                <p class="project-description">Saya Adalah Seorang Yang Lumayan Ahli Dalam Bidang Apapun, Mulai Dari Pendidikan, Olahraga, Dan Pertanian.</p>
+        <section id="about" class="about">
+            <h2>Tentang Saya</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Halo! Saya adalah Ferry Ferdianto, seorang pengembang web yang bersemangat dengan pengalaman dalam membuat website yang menarik dan fungsional. Saya suka belajar teknologi baru dan selalu berusaha memberikan hasil terbaik dalam setiap proyek.</p>
+                </div>
+                <div class="about-image">
+                    <img src="IMG-20250403-WA0024.jpg" alt="Tentang Saya">
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="skills" style="margin-top: 30px;">
-        <a class="skill" href="fer.html">Klik Disini Untuk Beralih Ke Bagian Bidang Keahlian</a>
-    </div>
-   
-</section>
+        </section>
 
+        <section id="skills" class="skills-section">
+            <h2>Keahlian</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 25px; color: #555;">
+                Berikut adalah salah satu bidang keahlian saya yang terus saya kembangkan seiring dengan pengalaman dan pembelajaran berkelanjutan.
+            </p>
 
-
+            <div class="projects">
+                <div class="project-card">
+                    <img src="Flower, sun, beauty😍.jpeg" alt="Keahlian" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">Beberapa Bidang Keahlian Saya</h3>
+                        <p class="project-description">Saya adalah seorang yang lumayan ahli dalam bidang apapun, mulai dari pendidikan, olahraga, dan pertanian.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <a class="skill" href="fer.html">Klik Disini Untuk Beralih Ke Bagian Bidang Keahlian</a>
+            </div>
+        </section>
 
         <section id="projects" class="projects-section">
             <h2>Proyek</h2>
@@ -274,6 +324,7 @@
                 </div>
             </div>
         </section>
+
         <section id="contact" class="contact-section">
             <h2>Kontak</h2>
             <p>Jika Anda tertarik bekerja sama atau ingin menghubungi saya, silakan klik tombol di bawah ini.</p>
